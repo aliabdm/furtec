@@ -1,0 +1,2018 @@
+{
+	"info": {
+		"_postman_id": "88ef6678-38c8-40fc-ba90-71ff955ac5dd",
+		"name": "Furtec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14679169",
+		"_collection_link": "https://blue-meadow-416537.postman.co/workspace/jam3ye~beb027e0-c409-40cb-a80e-147de5fb220b/collection/14679169-88ef6678-38c8-40fc-ba90-71ff955ac5dd?action=share&source=collection_link&creator=14679169"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "123345678912",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1233456789",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ali test",
+									"type": "text"
+								},
+								{
+									"key": "role_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/register",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ali test",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/login",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|PqpFPC2nwAjOLfqUcY7AMsHQH51IocZnP0RVIOLHb692d7ce",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "1233456789",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1233456789",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "ali test 2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/update-profile",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Worker",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "1233456789",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1233456789",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "ali test 234",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								},
+								{
+									"key": "workshop_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/update-worker/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"update-worker",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/user/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Workers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|zp5iJraxR2ds5zffWJ72wVSQKiKS5Ch92NgiHHMz123c1729",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/workers",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"workers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WorkShop",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hJmQ2SEOTxbn9xyTDH1MJPe9kOz6RtAtL1kZMrF73854e7b6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/workshop/list",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"workshop",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hJmQ2SEOTxbn9xyTDH1MJPe9kOz6RtAtL1kZMrF73854e7b6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/workshop/show/4",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"workshop",
+								"show",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|zp5iJraxR2ds5zffWJ72wVSQKiKS5Ch92NgiHHMz123c1729",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								},
+								{
+									"key": "title_en",
+									"value": "ws1",
+									"type": "text"
+								},
+								{
+									"key": "title_ar",
+									"value": "احلا مسا",
+									"type": "text"
+								},
+								{
+									"key": "content_en",
+									"value": "con1",
+									"type": "text"
+								},
+								{
+									"key": "content_ar",
+									"value": "احلا مساء",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/workshop/store",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"workshop",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|zp5iJraxR2ds5zffWJ72wVSQKiKS5Ch92NgiHHMz123c1729",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg",
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+									]
+								},
+								{
+									"key": "title_en",
+									"value": "ws11",
+									"type": "text"
+								},
+								{
+									"key": "title_ar",
+									"value": "احلا مسا",
+									"type": "text"
+								},
+								{
+									"key": "content_en",
+									"value": "con1",
+									"type": "text"
+								},
+								{
+									"key": "content_ar",
+									"value": "احلا مساء",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/workshop/update/4",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"workshop",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Part",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hoLC2S9Y0AcJ3R5ZJxRZKWwRQysYO9Nda7jqvGHN47300c3a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/part/list/3",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"part",
+								"list",
+								"3"
+							],
+							"query": [
+								{
+									"key": "color",
+									"value": "Clifton",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List By Color",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|OJ9XcyjDhrcUChNDBJ0FXO28ulo4yozjfTnB3fF949dc7606",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/part/list-by-color/3/green",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"part",
+								"list-by-color",
+								"3",
+								"green"
+							],
+							"query": [
+								{
+									"key": "color",
+									"value": "Clifton",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hJmQ2SEOTxbn9xyTDH1MJPe9kOz6RtAtL1kZMrF73854e7b6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/part/show/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"part",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|kSbZ736b3iFSLB8AMbhTnjgBzzy5jxhJqHqsklpW847eda29",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								},
+								{
+									"key": "name",
+									"value": "string",
+									"type": "text"
+								},
+								{
+									"key": "workshop_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "material_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "black",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "thickness",
+									"value": "1.21",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "1.25",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "1.2254",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/part/store",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"part",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|kSbZ736b3iFSLB8AMbhTnjgBzzy5jxhJqHqsklpW847eda29",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								},
+								{
+									"key": "name",
+									"value": "string",
+									"type": "text"
+								},
+								{
+									"key": "workshop_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "material_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "blacks",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "thickness",
+									"value": "1.21",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "1.25",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "1.2254",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/part/update/21",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"part",
+								"update",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|kSbZ736b3iFSLB8AMbhTnjgBzzy5jxhJqHqsklpW847eda29",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg",
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+									]
+								},
+								{
+									"key": "title_en",
+									"value": "ws11",
+									"type": "text"
+								},
+								{
+									"key": "title_ar",
+									"value": "احلا مسا",
+									"type": "text"
+								},
+								{
+									"key": "content_en",
+									"value": "con1",
+									"type": "text"
+								},
+								{
+									"key": "content_ar",
+									"value": "احلا مساء",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/part/delete/21",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"part",
+								"delete",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|0uXGDpY7IY2vUXDmcQgRHV9jl7k1XBwYqdkZuOHTcb16c409",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/order/list/3",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order",
+								"list",
+								"3"
+							],
+							"query": [
+								{
+									"key": "color",
+									"value": "Clifton",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hJmQ2SEOTxbn9xyTDH1MJPe9kOz6RtAtL1kZMrF73854e7b6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/order/show/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|vbVazqrpMhW57Ac18iOxDhdcKsV332nM222pci2968f7f84c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"order name\",\r\n    \"workshop_id\" : 2,\r\n    \"room_id\" : 2,\r\n    \"task_id\" : 2,\r\n    \"receiver_name\" : \"ali\",\r\n    \"phone\" : \"+962797803934\",\r\n    \"note\" : \"hello!\",\r\n    \"delivery_date\" : \"2024-02-27\",\r\n    \"image\" : \"image\",\r\n    \"order_parts\": [\r\n        {\r\n            \"material_id\": 2,\r\n            \"name\": \"pieces\",\r\n            \"color\": \"blue\",\r\n            \"count\": 2,\r\n            \"thickness\": 1.245,\r\n            \"height\": 1.25,\r\n            \"width\": 1.3\r\n        },\r\n        {\r\n            \"material_id\": 1,\r\n            \"name\": \"piece\",\r\n            \"color\": \"green\",\r\n            \"count\": 3,\r\n            \"thickness\": 1.245,\r\n            \"height\": 1.25,\r\n            \"width\": 1.3\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/order/store",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|vbVazqrpMhW57Ac18iOxDhdcKsV332nM222pci2968f7f84c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								},
+								{
+									"key": "name",
+									"value": "string",
+									"type": "text"
+								},
+								{
+									"key": "workshop_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "receiver_name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "black",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "task_id",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "room_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "delivery_date",
+									"value": "2024-02-27",
+									"description": "string",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "2",
+									"description": "1 PENDING |2 PROCESSING |3 COMPLETED |4 RECEIVED |5CANCELLED ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/order/update/43",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order",
+								"update",
+								"43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room Part",
+			"item": [
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hoLC2S9Y0AcJ3R5ZJxRZKWwRQysYO9Nda7jqvGHN47300c3a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/room-part/show/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room-part",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|kSbZ736b3iFSLB8AMbhTnjgBzzy5jxhJqHqsklpW847eda29",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								},
+								{
+									"key": "name",
+									"value": "string",
+									"type": "text"
+								},
+								{
+									"key": "room_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "material_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "black",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "thickness",
+									"value": "1.21",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "1.25",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "1.2254",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/room-part/store",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room-part",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|kSbZ736b3iFSLB8AMbhTnjgBzzy5jxhJqHqsklpW847eda29",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								},
+								{
+									"key": "name",
+									"value": "string",
+									"type": "text"
+								},
+								{
+									"key": "room_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "material_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "blacks",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "thickness",
+									"value": "1.21",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "1.25",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "1.2254",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/room-part/update/21",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room-part",
+								"update",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|kSbZ736b3iFSLB8AMbhTnjgBzzy5jxhJqHqsklpW847eda29",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg",
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+									]
+								},
+								{
+									"key": "title_en",
+									"value": "ws11",
+									"type": "text"
+								},
+								{
+									"key": "title_ar",
+									"value": "احلا مسا",
+									"type": "text"
+								},
+								{
+									"key": "content_en",
+									"value": "con1",
+									"type": "text"
+								},
+								{
+									"key": "content_ar",
+									"value": "احلا مساء",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/room-part/delete/21",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room-part",
+								"delete",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|ly2i3iDY9gX4oFxzLpdnWtHouka13mtVr9Fth19hdaed6f8f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/room/list",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room",
+								"list"
+							],
+							"query": [
+								{
+									"key": "color",
+									"value": "Clifton",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|hJmQ2SEOTxbn9xyTDH1MJPe9kOz6RtAtL1kZMrF73854e7b6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/room/show/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|usxhUWMSBFcDOVMoHVXNorEPvDUfV7vwTVzDJfrs21ce958f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"room name2\",\r\n    \"room_parts\": [//optional\r\n        {\r\n            \"material_id\": 2,\r\n            \"name\": \"pieces\",\r\n            \"color\": \"blue\",\r\n            \"count\": 2,\r\n            \"thickness\": 1.245,\r\n            \"height\": 1.25,\r\n            \"width\": 1.3\r\n        },\r\n        {\r\n            \"material_id\": 1,\r\n            \"name\": \"piece\",\r\n            \"color\": \"green\",\r\n            \"count\": 3,\r\n            \"thickness\": 1.245,\r\n            \"height\": 1.25,\r\n            \"width\": 1.3\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/room/store",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|usxhUWMSBFcDOVMoHVXNorEPvDUfV7vwTVzDJfrs21ce958f",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "ali",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/room/update/15",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room",
+								"update",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|kSbZ736b3iFSLB8AMbhTnjgBzzy5jxhJqHqsklpW847eda29",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg",
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+									]
+								},
+								{
+									"key": "title_en",
+									"value": "ws11",
+									"type": "text"
+								},
+								{
+									"key": "title_ar",
+									"value": "احلا مسا",
+									"type": "text"
+								},
+								{
+									"key": "content_en",
+									"value": "con1",
+									"type": "text"
+								},
+								{
+									"key": "content_ar",
+									"value": "احلا مساء",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/room/delete/21",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"room",
+								"delete",
+								"21"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Part",
+			"item": [
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|KFrEHsO12Y9oXR1JM5KejEl9QPPPng0PhFHfJmhH6dabc7e6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/order-part/show/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order-part",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|pvw99v4BrKzwZtsSDaGns65CsPFrcf8YaQU17pcSc3dbdf25",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "material_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "ali",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "green",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "thickness",
+									"value": "1.3",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "1.33",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "1.355",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/order-part/store",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order-part",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|pvw99v4BrKzwZtsSDaGns65CsPFrcf8YaQU17pcSc3dbdf25",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "material_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Humsi",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "green",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "thickness",
+									"value": "1.3",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "1.33",
+									"type": "text"
+								},
+								{
+									"key": "width",
+									"value": "1.355",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/order-part/update/42",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order-part",
+								"update",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|pvw99v4BrKzwZtsSDaGns65CsPFrcf8YaQU17pcSc3dbdf25",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg",
+										"/C:/Users/NTC/Desktop/images/318333543_2736768813127012_2113293945587618565_n.jpg"
+									]
+								},
+								{
+									"key": "title_en",
+									"value": "ws11",
+									"type": "text"
+								},
+								{
+									"key": "title_ar",
+									"value": "احلا مسا",
+									"type": "text"
+								},
+								{
+									"key": "content_en",
+									"value": "con1",
+									"type": "text"
+								},
+								{
+									"key": "content_ar",
+									"value": "احلا مساء",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/order-part/delete/42",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"order-part",
+								"delete",
+								"42"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Material",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local}}/material/list",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"material",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
